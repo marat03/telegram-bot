@@ -29,11 +29,6 @@ async def delete_posted(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except TelegramError as e:
         print(f"Не удалось удалить целевое сообщение: {e}")
 
-    try:
-        await message.delete()
-    except TelegramError as e:
-        print(f"Не удалось удалить сообщение 'posted': {e}")
-
 
 def main():
     if not BOT_TOKEN:
